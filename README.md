@@ -91,12 +91,16 @@ When the user asks what chatrooms are available, return a list of chatroom names
 
 When the user asks how many accounts have been registered, you should return [a text response](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook#text_response) with the number of accounts. **You will need to use the webhook for this intent.**
 
+**You must use `async`/`await` syntax!** Do not use `.then`.
+
 ![Number of Users](figures/users.png)
 
 
 ### 5. Number of Posts Intent
 
 When the user asks how many posts have been made, return the total number of posts on BadgerChat. Furthermore, if the user specifies a specific chatroom, you should return the number of posts for that specific chatroom. Both should be [text reponses](https://cloud.google.com/dialogflow/es/docs/fulfillment-webhook#text_response). **You will need to use the webhook for this intent.**
+
+**You must use `async`/`await` syntax!** Do not use `.then`.
 
 ![Number of Posts](figures/num_posts.png)
 
@@ -111,10 +115,14 @@ For your convenience, a fully-implemented version of BadgerChat Web is hosted at
 
 **You will need to use the webhook for this intent.** You will use the BadgerChat API to *get* the latest posts, and you will *direct* the user to `https://www.coletnelson.us/cs571/f22/badgerchat/chatrooms/CHATROOM_NAME/messages/POST_ID` to view the post in greater detail.
 
+**You must use `async`/`await` syntax!** Do not use `.then`.
+
 ![Get Latest Posts](figures/get_posts.png)
 
 ### Other Notes
 **You should include multiple training phrases (3+) for each intent.** However, you do not need multiple responses for your intents; one response will do.
+
+**You must use `async`/`await` syntax!** Do not use `.then`.
 
 When you are complete, I would expect your DialogFlow agent to have the following intents...
 

@@ -31,9 +31,9 @@ app.use(morgan(':date ":method :url" :status - :response-time ms'));
 // You should be able to visit this in your browser
 // at localhost:53705 or via the ngrok URL.
 app.get('/', (req, res) => {
-  res.status(200).send(JSON.stringify({
+  res.status(200).send({
     msg: 'Express Server Works!'
-  }))
+  })
 })
 
 // Dialogflow will POST a JSON body to /.
@@ -77,7 +77,7 @@ app.listen(port, () => {
 
 async function getNumUsers(req, res) {
 
-  // TODO Fetch data from API
+  // TODO Fetch data from API using async/await
 
   res.status(200).send({
     fulfillmentMessages: [
