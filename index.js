@@ -1,7 +1,6 @@
 
 // You MUST have a file called "token.secret" in the same directory as this file!
 // This should be the secret token found in https://dashboard.ngrok.com/
-// Make sure it is on a single line with no spaces!
 // It will NOT be committed.
 
 // TO START
@@ -18,7 +17,7 @@ import morgan from 'morgan';
 import express from 'express';
 
 // Read and register with secret ngrok token.
-ngrok.authtoken(fs.readFileSync("token.secret").toString())
+ngrok.authtoken(fs.readFileSync("token.secret").toString().trim());
 
 // Start express on port 53705
 const app = express();
